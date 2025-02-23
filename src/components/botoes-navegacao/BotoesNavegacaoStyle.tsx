@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         height: 60,
         width: '100%',
-        backgroundColor: colors.roxoSecundario,
+        backgroundColor: colors.azulSecundario,
         alignItems: 'center'
     },
     botao: {
@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
     },
     botaoAdicionar: {
         height: 60,
-        backgroundColor: colors.roxoPrimario,
+        backgroundColor: colors.azulPrimario,
         borderRadius: 40,
         top: -10
     },
@@ -36,6 +36,6 @@ export const styles = StyleSheet.create({
         color: colors.branco
     },
     botaoSelecionado: {
-        color: colors.roxoPrimario
+        color: colors.azulPrimario
     }
 });

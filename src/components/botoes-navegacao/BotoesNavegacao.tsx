@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, TouchableOpacity } from "react-native";
+import { Pressable, SafeAreaView, Text, TouchableOpacity } from "react-native";
 import { styles } from "./BotoesNavegacaoStyle";
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useState } from "react";
@@ -22,10 +22,10 @@ export default function BotoesNavegacao() {
                 <Icon name="construction" style={[styles.iconeBotao, botaoSelecionado === 'melhorias' && styles.botaoSelecionado]}/>
                 <Text style={[styles.textoBotao, botaoSelecionado === 'melhorias' && styles.botaoSelecionado]}> Melhorias </Text>
             </TouchableOpacity>
-
-            <TouchableOpacity style={[styles.botao, styles.botaoAdicionar]}>
+ 
+            <Pressable style={[styles.botao, styles.botaoAdicionar]}>
                 <Icon name="add" style={styles.iconeBotaoAdicionar}/>
-            </TouchableOpacity>
+            </Pressable>
 
             <TouchableOpacity style={styles.botao} onPress={() => selecionarBotao('relatorios')}>
                 <Icon name="equalizer" style={[styles.iconeBotao, botaoSelecionado === 'relatorios' && styles.botaoSelecionado]}/>

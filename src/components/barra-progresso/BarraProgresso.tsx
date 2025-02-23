@@ -1,34 +1,44 @@
 import { useEffect, useState } from "react";
 import { styles } from "./BarraProgressoStyle";
-import { View, Text, Animated } from 'react-native';
+import { View, Animated } from 'react-native';
 
 export default function BarraProgresso() {
 
-    const [progresso, setProgresso] = useState(0);
-    const valorProgresso = new Animated.Value(70);
+    const valorProgresso = new Animated.Value(0);
+    const progressoFinal = 100;
 
-    // Atualiza o estado do progresso a cada 100 ms para mostrar o valor
     useEffect(() => {
-        const intervalo = setInterval(() => {
-            if (progresso < 100) {
-                setProgresso(progresso + 1);
-            }
-        }, 100);
-
-        return () => clearInterval(intervalo);
-    }, [progresso]);
+        // Inicia a animação quando o componente é montado
+        Animated.timing(valorProgresso, {
+            toValue: progressoFinal, // Valor final da animação
+            duration: 2000, // Duração da animação em milissegundos (2 segundos neste exemplo)
+            useNativeDriver: false, // `false` porque estamos animando a largura, que não é suportada por native driver
+        }).start();
+    }, []);
 
     return (
         <View style={styles.container}>
-            <View style={styles.viewBarra}>
+            
+            <View style={styles.barra}>
                 <Animated.View
                     style={[
                         styles.barraProgresso,
-                        { width: valorProgresso.interpolate({ inputRange: [0, 100], outputRange: ['0%', '100%'] }) },
+                        {
+                            width: valorProgresso.interpolate({
+                                inputRange: [0, 100],
+                                outputRange: ['0%', '100%'], // Progresso animado em porcentagem
+                            }),
+                        },
                     ]}
                 />
             </View>
-            <Text style={styles.percentualProgresso}> 70% </Text>
+
+            <Animated.Text style={styles.percentualProgresso}>
+                {valorProgresso.interpolate({
+                    inputRange: [0, 100],
+                    outputRange: ['0%', `${progressoFinal}%`],
+                })}
+            </Animated.Text>
         </View>
     );
 }

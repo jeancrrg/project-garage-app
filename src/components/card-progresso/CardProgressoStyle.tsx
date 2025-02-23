@@ -3,19 +3,17 @@ import colors from "../../styles/Colors";
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        width: '90%',
-        margin: 30
+        width: '98%',
+        marginVertical: 30,
+        marginHorizontal: 3
     },
     card: {
         backgroundColor: colors.branco,
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingRight: 30,
-        paddingLeft: 30,
+        paddingVertical: 10,
+        paddingHorizontal: 30,
         borderRadius: 10,
         shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
+        shadowOffset: { width: 2, height: 2 },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
         elevation: 5 // Somente para Android, cria uma elevação para o card

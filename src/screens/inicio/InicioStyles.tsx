@@ -7,5 +7,13 @@ export const styles = StyleSheet.create({
         color: colors.branco,
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    scrollContainer: {
+        flexGrow: 1,
+        paddingBottom: 100 // Para garantir que não fique sobre os botões
+    },
+    botoesFixos: {
+        position: 'absolute',
+        bottom: 0
     }
 });

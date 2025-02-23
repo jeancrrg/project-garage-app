@@ -3,15 +3,16 @@ import colors from "../../styles/Colors";
 
 export const styles = StyleSheet.create({
     container: {
-        justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center' 
     },
-    viewBarra: {
-        width: '100%',
+    barra: {
+        width: '80%',
         height: 20,
         backgroundColor: colors.cinzaClaro,
         borderRadius: 10,
-        overflow: 'hidden' // Garante que o conteúdo não ultrapasse a borda
+        overflow: 'hidden',
+        marginBottom: 10
     },
     barraProgresso: {
         height: '100%',
@@ -19,8 +20,8 @@ export const styles = StyleSheet.create({
         borderRadius: 10
     },
     percentualProgresso: {
-        color: colors.preto,
-        fontSize: 18,
-        marginTop: 10
-    },
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#333'
+    }
 });

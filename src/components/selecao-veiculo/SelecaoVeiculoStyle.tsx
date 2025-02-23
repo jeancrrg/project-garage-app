@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     },
     viewSelecaoVeio: {
         height: 40,
-        backgroundColor: colors.branco,
+        backgroundColor: colors.azulRoyal,
         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
         justifyContent: 'center', // Alinha verticalmente
         alignItems: 'flex-start', // Alinha horizontalmente à esquerda
@@ -18,11 +18,11 @@ export const styles = StyleSheet.create({
         alignItems: 'center' // Alinha verticalmente
     },
     textoSelecao: {
-        color: colors.cinzaEscuro
+        color: colors.branco
     },
     iconeSelecao: {
         fontSize: 25,
-        color: colors.cinzaEscuro,
+        color: colors.branco,
         marginRight: 5,
         marginLeft: 5
     }

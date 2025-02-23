@@ -3,12 +3,20 @@ import colors from "../../styles/Colors";
 
 export const styles = StyleSheet.create({
     container: {
+        display: 'flex',
+        flexDirection: 'row',
         width: '100%',
         height: 60,
-        backgroundColor: colors.roxoPrimario,
-        justifyContent: 'center', // Alinha verticalmente
-        alignItems: 'flex-end', // Alinha horizontalmente à esquerda
-        paddingRight: 20
+        backgroundColor: colors.azulPrimario,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingLeft: 20,
+        paddingRight: 20,
+        marginTop: 30,
+    },
+    texto: {
+        fontSize: 25,
+        color: colors.branco
     },
     iconeBotao: {
         fontSize: 30,
