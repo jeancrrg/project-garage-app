@@ -1,8 +1,9 @@
-import { Image, SafeAreaView, Text, View } from "react-native";
+import { BackHandler, Image, Pressable, SafeAreaView, Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./InformacoesVeiculoStyle";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CardInfo from "./card-info/CardInfo";
+import { Modal } from "react-native";
 
 export default function InformacoesVeiculo() {
     
@@ -11,12 +12,29 @@ export default function InformacoesVeiculo() {
     const [potenciaAtual, setPotenciaAtual] = useState('110 cv');
     const [velocidadeMaxima, setVelocidadeMaxima] = useState('220 km/h');
     const [dataAquisicaoVeiculo, setDataAquisicaoVeiculo] = useState('02/08/2023');
-    
+    const [expandirImagem, setExpandirImagem] = useState(false);
+
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.containerImagem}>
-                <Image source={require('../../../assets/astra.png')} style={styles.imagem}/>
+                <Pressable onPress={() => setExpandirImagem(true)} style={styles.containerImagem}>
+                    <Image source={require('../../../assets/astra.png')} style={styles.imagem}/>
+                </Pressable>
+
+                {/* Modal de imagem expandida ao clicar na imagem */}
+                <Modal visible={expandirImagem} transparent={true} onRequestClose={() => setExpandirImagem(false)}>
+                    <Pressable onPress={() => setExpandirImagem(false)} style={styles.modalContainer}>
+                        <View style={styles.containerImagemExpandida}>
+                            <TouchableOpacity style={styles.botaoFechar} onPress={() => setExpandirImagem(false)}>
+                                <MaterialCommunityIcons name="close" size={30} color="white" />
+                            </TouchableOpacity>
+                            
+                            <Image source={require('../../../assets/astra.png')} style={styles.imagemExpandida}/>
+                        </View>
+                    </Pressable>
+                </Modal>
             </View>
+
             <View style={styles.informacoesModelo}>
                 <View style={styles.modelo}>
                     <MaterialCommunityIcons name='shield-car' size={25} color='white' />

@@ -22,6 +22,30 @@ export const styles = StyleSheet.create({
         width: '100%',
         resizeMode: 'cover'
     },
+    modalContainer: {
+        flex: 1, // Ocupar toda a tela
+        backgroundColor: 'rgba(0,0,0,0.9)', // Fundo escuro
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    containerImagemExpandida: {
+        position: 'relative',
+        width: '100%',
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    botaoFechar: {
+        position: 'absolute',
+        top: 190,
+        right: 20,
+        zIndex: 1
+    },
+    imagemExpandida: {
+        width: '100%',
+        height: '100%',
+        resizeMode: 'contain'
+    },
     informacoesModelo: {
         flexDirection: 'row',
         justifyContent: 'flex-end',
