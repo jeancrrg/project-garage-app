@@ -9,11 +9,9 @@ export const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     scrollContainer: {
-        flexGrow: 1,
+        borderWidth: 2,
+        borderColor: 'black',
+        flex: 1,
         paddingBottom: 100 // Para garantir que não fique sobre os botões
-    },
-    botoesFixos: {
-        position: 'absolute',
-        bottom: 0
     }
 });

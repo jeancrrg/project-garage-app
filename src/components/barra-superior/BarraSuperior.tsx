@@ -10,7 +10,7 @@ interface BarraSuperiorProps {
 export default function BarraSuperior(props: BarraSuperiorProps) {
     return (
         <SafeAreaView style={styles.container}>
-            <View> 
+            <View>
                 <Text style={styles.texto}> {props.label} </Text>
             </View>
 

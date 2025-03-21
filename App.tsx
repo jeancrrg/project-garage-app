@@ -1,7 +1,10 @@
-import Inicio from './src/screens/inicio/Inicio';
+import { NavigationContainer } from '@react-navigation/native';
+import AppRoutes from './src/routes/AppRoutes';
 
 export default function App() {
     return (
-        <Inicio/>
+        <NavigationContainer>
+            <AppRoutes />
+        </NavigationContainer>
     );
 }

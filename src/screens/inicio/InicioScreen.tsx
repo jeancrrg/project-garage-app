@@ -1,14 +1,12 @@
 import { SafeAreaView, ScrollView } from "react-native";
-import { styles } from "./InicioStyles";
-import BotoesNavegacao from "../../components/botoes-navegacao/BotoesNavegacao";
+import { styles } from "./InicioScreenStyles";
 import BarraSuperior from "../../components/barra-superior/BarraSuperior";
 import SelecaoVeiculo from "../../components/selecao-veiculo/SelecaoVeiculo";
 import CardProgresso from "../../components/card-progresso/CardProgresso";
 import { StatusBar } from "expo-status-bar";
 import InformacoesVeiculo from "../../components/informacoes-veiculo/InformacoesVeiculo";
-import { View } from "react-native";
 
-export default function Inicio() {
+export default function InicioScreen() {
     return (
         <SafeAreaView style={styles.container}>
             <BarraSuperior label="Início"/>
@@ -18,10 +16,6 @@ export default function Inicio() {
                 <CardProgresso/>
                 <InformacoesVeiculo/>
             </ScrollView>
-
-            <View style={styles.botoesFixos}>
-                <BotoesNavegacao/>
-            </View>
 
             <StatusBar style='dark' />
         </SafeAreaView>
