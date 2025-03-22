@@ -11,8 +11,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingLeft: 20,
-        paddingRight: 20,
-        marginTop: 30,
+        paddingRight: 20
     },
     texto: {
         fontSize: 25,

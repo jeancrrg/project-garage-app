@@ -10,6 +10,6 @@ export const styles = StyleSheet.create({
     },
     scrollContainer: {
         flexGrow: 1,
-        paddingBottom: 100 // Para garantir que não fique sobre os botões
+        paddingBottom: 50 // Para garantir que não fique sobre os botões
     }
 });

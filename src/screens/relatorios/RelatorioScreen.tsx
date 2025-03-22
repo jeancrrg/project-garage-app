@@ -1,10 +1,11 @@
-import { Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import TopBar from "../../components/topbar/TopBar";
+import { styles } from "./RelatorioScreenStyle";
 
 export default function RelatorioScreen() {
     return (
-        <SafeAreaView>
-            <Text> relatorios </Text>
+        <SafeAreaView style={styles.container}>
+            <TopBar label="Relatórios"/>
         </SafeAreaView>
     );
 }

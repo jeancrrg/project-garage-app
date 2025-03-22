@@ -1,17 +1,17 @@
-import { BackHandler, Image, Pressable, SafeAreaView, Text, TouchableOpacity, View } from "react-native";
+import { Image, Pressable, SafeAreaView, Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./InformacoesVeiculoStyle";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CardInfo from "./card-info/CardInfo";
 import { Modal } from "react-native";
 
 export default function InformacoesVeiculo() {
     
-    const [modelo, setModelo] = useState('Astra GL');
-    const [motor, setMotor] = useState('1.8 8v');
-    const [potenciaAtual, setPotenciaAtual] = useState('110 cv');
-    const [velocidadeMaxima, setVelocidadeMaxima] = useState('220 km/h');
-    const [dataAquisicaoVeiculo, setDataAquisicaoVeiculo] = useState('02/08/2023');
+    const [modelo] = useState('Astra GL');
+    const [motor] = useState('1.8 8v');
+    const [potenciaAtual] = useState('110 cv');
+    const [velocidadeMaxima] = useState('220 km/h');
+    const [dataAquisicaoVeiculo] = useState('02/08/2023');
     const [expandirImagem, setExpandirImagem] = useState(false);
 
     return (
