@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function SelecaoVeiculo() {
 
-    const [nomeVeiculo, setNomeVeiculo] = useState('Astra GL 1.8');
+    const [nomeVeiculo] = useState('Astra GL 1.8');
 
     return (
         <SafeAreaView  style={styles.container}>

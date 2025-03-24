@@ -23,7 +23,6 @@ export const styles = StyleSheet.create({
     iconeSelecao: {
         fontSize: 25,
         color: colors.branco,
-        marginRight: 5,
-        marginLeft: 5
+        marginHorizontal: 5
     }
 });

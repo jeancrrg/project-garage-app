@@ -18,15 +18,6 @@ interface CustomTabBarStyle extends ViewStyle {
     overflow: 'visible' | 'hidden';
 }
 
-// Define as rotas válidas para o navegador
-type Rotas = {
-    'inicio': undefined;
-    'melhorias': undefined;
-    'adicionar-melhoria': undefined;
-    'relatorios': undefined;
-    'mais-informacoes': undefined;
-};
-
 const { Screen, Navigator } = createBottomTabNavigator();
 
 export default function AppRoutes() {
